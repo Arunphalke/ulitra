@@ -1,0 +1,29 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "product"
+    label: "Products"
+    folder: "products"
+    create: true
+    slug: "{{id}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Product Code (number)", name: "id", widget: "number", value_type: "int", min: 1 }
+      - { label: "Product Name", name: "name", widget: "string", required: false }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Beauty","Gadgets","Fashion","Home"]
+      - { label: "Image (800x800, <200KB, name ul-111.jpg)", name: "image", widget: "image" }
+      - { label: "Affiliate link", name: "affiliate", widget: "string" }
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        options: ["Active","Hidden"]
+      - { label: "Alt text (for accessibility)", name: "alt", widget: "string", required: false }

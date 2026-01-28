@@ -1,0 +1,50 @@
+---
+layout: null
+pagination:
+  data: categories
+  size: 1
+  alias: cat
+permalink: "c/{{ cat.slug }}/index.html"
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ulitra • {{ cat.name }}</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+
+<body data-category="{{ cat.name }}">
+  <div class="topbar">
+    <a class="brand" href="/">Ulitra</a>
+    <div class="social">
+      <a class="iconbtn" href="https://instagram.com/arina.ernova" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+      <a class="iconbtn" href="https://www.threads.net/@arina.ernova" target="_blank" rel="noopener" aria-label="Threads">Th</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="sectionTitle">{{ cat.name }}</div>
+
+    <div class="searchWrap">
+      <input class="search" data-search placeholder="Search 111 or product name" />
+    </div>
+
+    <div class="grid" data-products></div>
+
+    <div class="footer">
+      <div><strong>Affiliate disclosure:</strong> Some links are affiliate links.</div>
+      <div style="margin-top:10px;">
+        <a class="smallLink" href="/">Back to Home</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.__PRODUCTS__ = {{ collections.products | dump | safe }};
+  </script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

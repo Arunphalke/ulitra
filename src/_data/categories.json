@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Beauty",
+    "slug": "beauty"
+  },
+  {
+    "name": "Gadgets",
+    "slug": "gadgets"
+  },
+  {
+    "name": "Fashion",
+    "slug": "fashion"
+  },
+  {
+    "name": "Home",
+    "slug": "home"
+  }
+]

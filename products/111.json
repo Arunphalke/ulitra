@@ -1,0 +1,9 @@
+{
+  "id": 111,
+  "name": "Example product name",
+  "category": "Beauty",
+  "image": "/images/ul-111.jpg",
+  "affiliate": "https://example.com/your-affiliate-link",
+  "status": "Hidden",
+  "alt": "Example product"
+}
