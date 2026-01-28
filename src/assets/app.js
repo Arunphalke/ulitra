@@ -52,7 +52,7 @@ function renderProducts(products, mountEl, query, category){
   }).join("");
 
   if(filtered.length === 0){
-    mountEl.innerHTML = `<div style="grid-column:1/-1;color:var(--muted);padding:10px;">No products found.</div>`;
+    mountEl.innerHTML = `<div class="empty">No products found.</div>`;
   }
 }
 
