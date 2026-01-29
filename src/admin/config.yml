@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Arunphalke/ulitra
   branch: main
 
 media_folder: "images"
